@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!-- materialazer css -->
+    <!-- compiled and minified css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="class nav-wraooer">
+                <ul class="left">
+                    <li>
+                        <a href="a">Home</a>
+                    </li>
+                    <li>
+                        <a href="a">Produtos</a>
+                    </li>
+                </ul>
+                <a href="a" class="brand-logo center">Logo</a>
+
+                <ul class="right">
+                    <li>
+                        <a href="a">Perfil</a>
+                    </li>
+                    <li>
+                        <a href="a">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <h1>Itens de Formulario</h1>
+    <div class="row">
+        <form action="" class="col s12" enctype="multipart/form-data">
+            <div class="row">
+                <!-- grupo de input -->
+                <div class="input-field col s6">
+                    <input name="texto" id="texto" type="text" class="validate">
+                    <label for="texto">Texto</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input name="senha" id="senha" type="password" class="validate">
+                    <label for="senha">Senha</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="email" id="email" type="email" class="validate">
+                    <label for="email">E-mail</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="site" id="site" type="url" class="validate">
+                    <label for="site">Site</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input min="0" max="3" step="0.5" name="numero" id="numero" type="number" class="validate">
+                    <label for="numero">Numero</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="telefone" id="telefone" type="tel" class="validate">
+                    <label for="telefone">Telefone</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="data" id="data" type="date" class="validate">
+                    <label for="data">Data</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="datahora" id="datahora" type="datetime-local" class="validate">
+                    <label for="datahora" class="active">Data e Hora</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="ano" id="ano" type="month" class="validate">
+                    <label for="ano" class="active">Semana</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="hora" id="hora" type="time" class="validate">
+                    <label for="hora" class="active">Hora</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="cor" id="cor" type="color" class="validate">
+                    <label for="cor" class="active">Cor</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input name="intervalo" id="intervalo" type="range" class="validate">
+                    <label for="intervalo" class="active">Intervalo</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="textao" id="textao" rows="10" cols="30" max-lengh="500"
+                        class="materialize-textarea"></textarea>
+                    <label for="intervalo">Textao</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <!-- accept "extensao" para selecionar um ou mais tipos -->
+                    <!-- multiple para permitir um ou mais arquivos -->
+                    <!-- ativar o enctype "multipart/form-data"-->
+                    <input multiple accept=".jpeg, .png" name="arquivo" id="arquivo" type="file" class="validate">
+                    <label for="arquivo" class="active">Arquivo</label>
+                </div>
+            </div>
+            <!-- checkbox -->
+            <!-- checked para deixar ativo -->
+            <p>
+                <label>
+                    <input name="matriculado" id="matriculado" type="checkbox" />
+                    <span>Matriculado</span>
+                </label>
+            </p>
+            <!-- radio group -->
+            <p>
+                <label>
+                    <input id="grupo1" name="grupo1" type="radio" checked />
+                    <span>Pix</span>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input id="grupo1" name="grupo1" type="radio" />
+                    <span>Boleto</span>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input class="with-gap" id="grupo1" name="grupo1" type="radio" />
+                    <span>Debito</span>
+                </label>
+            </p>
+
+            <div class="input-field col s12">
+                <select id="selecao" nome="selecao">
+                    <option value="" disabled selected>Escolha uma Opção</option>
+                    <option value="1">Pix</option>
+                    <option value="2">Boleto</option>
+                    <option value="3">Debito</option>
+                </select>
+                <label>Tipo de Pagamento</label>
+            </div>
+        </form>
+
+        <div>
+            <h3>Lista</h3>
+            <p>Vou usar o <code>ul</code> ou <code>ol</code></p>
+            <span>Lista simples</span>
+            <ul>
+                <li>Primeiro</li>
+                <li>Segundo</li>
+                <li>Terceiro</li>
+            </ul>
+
+            <span>Lista ordenado</span>
+            <ol>
+                <li>Primeiro</li>
+                <li>Segundo</li>
+                <li>Terceiro</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- compiled and minified javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, {});
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+/* Resete basico de css de navegador */
+* {
+    /* Ajuste a margem da pagina */
+    margin: 0;
+    /* Espaçamento interno */
+    padding: 0;
+    /* Tamanho do box */
+    box-sizing: border-box;
+}
+
+/* Com tag html */
+body {
+    /* Familia de fontes para a pagina */
+    font-family: 'Roboto', sans-serif;
+    /* Altura da linha */
+    line-height: 1.6;
+    /* cor rgb, digitar ou usar hexadecinal*/
+    color: #333;
+}
+
+.cabecalho-section {
+    /* imagem de fundo */
+    background: url("car-wash.webp") no-repeat center/cover;
+    /*  altura  ViewPort*/
+    height: 100vh;
+    /* Criar layout personalizados e flexiveis */
+    display: flex;
+    /* Justificar o conteudo: horizontal */
+    justify-content: center;
+    /* Justificar o conteudo: vertical */
+    align-items: center;
+    /* alinhamento do texto: alinhamento */
+    text-align: center;
+    /*  cor */
+    color: #fff;
+}
+
+/* configurando header */
+header {
+    text-align: center;
+    padding: 100px 20px;
+    color: #fff;
+}
+
+header h1 {
+    /* Tamanho fonte em relação ao padrão */
+    font-size: 4.5rem;
+    /* Sombra do texto */
+    text-shadow: 4px 4px 8px rgb(0, 0, 0, 0.8);
+}
+
+
+header p {
+    font-size: 2.5rem;
+    /* margem: superior (top), inferior (bottom) */
+    /* margem: esquerda (left), direita (right) */
+    margin-top: 10px;
+    text-shadow: 3px 3px 6px rgb(0, 0, 0, 0.8);
+}
+
+header a {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    /* cor de fundo */
+    background-color: #007bff;
+    color: #fff;
+    /* bordas */
+    /* border: 10px solid red */
+    /* border-style: dotted; border- color: red; border- width: 4px */
+    border: none;
+    /* arredondar bordas */
+    border-radius: 15px;
+    /* mudar cursor */
+    cursor: pointer;
+    /* sombra da caixa */
+    box-shadow: 3px 3px 6px rgb(0, 0, 0, 0.4);
+
+}
+
+/* mudar a cor do elemento quando eu passo o mouse em cima dele tag: hover */
+header a:hover {
+    background-color: #0056b3;
+}
+
+/* efeito no cabeçalho*/
+header::before {
+    content: "";
+    /* posicao do elemento: relativo, absoluti, fixado */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* ocupar 100% do header */
+    width: 100%;
+    height: 100%;
+    /* destaque */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* profundidade */
+    z-index: -1;
+}
+
+/* uso configuraçoes na tag para padronizar */
+/* passo usar classe para ajuste fino ou rescrever caracteristicas */
+
+.cabecalho-conteudo {
+    /* tamanho maximo do cabecalho */
+    max-width: 600px;
+}
+
+/* modificar tag que estao envoltas em um determinada classe */
+.cabecalho-conteudo h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+}
+
+.cabecalho-conteudo p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* configurando o botao */
+.btn-primary {
+    padding: 0.7rem 1.5rem;
+    background-color: #007bff;
+    /* formatação do texto */
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+
+}
+
+
+/* serviços */
+.secao-servicos {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    /* alilhamento de texto */
+    text-align: center;
+}
+
+.secao-servicos h2 {
+    /* margem inferior */
+    margin-bottom: 1.5rem;
+
+}
+
+.lista-servicos {
+    /* ordenação dos elementos do container */
+    /* controla o layout */
+    /* brock: ocupa todo o espaço */
+    /* inline: ocupa o espaço necessario */
+    /* inline-block: permite definir altura e largura */
+    /* none: nao renderiza o elemento */
+    /* flex: conteudo responsivo */
+    /* grid: linhas e colunas */
+    display: flex;
+    /* organizar com base no espaço */
+    justify-content: space-around;
+    /* quando eu quero ou nao que os elemnetos formem uma nova linha */
+    /* nowrap: unica linha */
+    /* wrap: quebra a linha */
+    /* wrap-reserse: inverte a ordem */
+    flex-wrap: wrap;
+}
+
+.item-servico {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.secao-sobre {
+    padding: 2rem 1rem;
+    /* cor de fundo */
+    background-color: #007bff;
+    /* cor do texto */
+    color: #fff;
+    /* alinhamento do texto */
+    text-align: center;
+}
+
+.secao-testemunhos {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.lista-testemunhos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item-testemunho {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.item-testemunho span {
+    font-weight: 600;
+}
+
+.secao-contato {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.form-contato {
+    /* tamanho maximo */
+    max-width: 600px;
+    /* centralizar componentes */
+    margin: 0 auto;
+}
+
+/* agrupando css */
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-contato button {
+    padding: 0.7rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.rodape {
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* media queries */
+@media(max-width) {
+
+    .lista-servicos,
+    .lista-testemunhos {
+        /* direção da organização */
+        flex-direction: column;
+        /* alinhamento */
+        align-items: center;
+    }
+
+    .item-servico,
+    .item-testemunho {
+        width: 80%;
+    }
+}

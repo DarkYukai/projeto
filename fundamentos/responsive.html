@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsivo</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 60px;
+            /* tornar o layout flexivel */
+            display: flex;
+            /* deixar ele em coluna */
+            /* padrao é em coluna */
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            /* fixed o menu nao pode se mover */
+            position: fixed;
+            /* zerar margem superior */
+            top: 0;
+            /* ocupar 100% da largura */
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px;
+            /* transição animação */
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            width: 90%;
+            max-width: 800px;
+            /* superior/inferior e esquerda/direita */
+            margin: 20px 0;
+            /* 4 lados */
+            padding: 20px;
+            /* borda */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            margin: 10px 0 20px 0;
+        }
+
+        .item {
+            border: 1px dashed #aaa;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .flex-horizontal {
+            display: flex;
+            justify-content: center;
+        }
+
+        .flex-vertical {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .grid-centralizado {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(2, 100px);
+            place-items: center;
+        }
+
+        .texto-centralizado {
+            text-align: center;
+        }
+
+        .responsivo {
+            width: 90%;
+            max-width: 900px;
+        }
+
+        /* media querie eu uso para uma camada a mais de responsividade */
+        @media(max-width: 600px) {
+            .responsivo {
+                background-color: #e0f7fa;
+            }
+
+            .nao-responsivo {
+                background-color: #ffebee;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- menus -->
+        <nav>
+            <!-- utilizo a para os links -->
+            <a href="#flex-horizontal">Flexbox Horizontal</a>
+            <a href="#flex-vertical">Flexbox Vertical</a>
+            <a href="#grid-centralizado">Grid Centralizado</a>
+            <a href="#texto-centralizado">Texto Centralizado</a>
+            <a href="#nao-responsivo">Não Responsivo</a>
+            <a href="#responsivo">Responsivo</a>
+        </nav>
+    </header>
+
+    <section id="flex-horizontal">
+        <h2>Flex Horizontal</h2>
+        <p>Os itens são alinhados horizontalmente.
+            A propriedade <code>justify-content:center;</code> centraliza os itens dentro do flexbox.
+        </p>
+        <div class="flex-horizontal">
+            <!-- div.item*5 e aperto o tab -->
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+        </div>
+    </section>
+
+    <section id="flex-vertical">
+        <h2>Flex Vertical</h2>
+        <p>
+            Os itens são organizado verticalmente e são centralizados com base do container
+            <code>flex-direction: column;</code> alinha no formato de coluna.
+            <code>justify-content: center;</code> para centralizar no container.
+        </p>
+        <div class="flex-vertical">
+            <!-- div.item*5 e aperto o tab -->
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+        </div>
+    </section>
+
+    <section id="grid-centralizado">
+        <h2>Grid Centralizado</h2>
+        <p>
+            É usado para centralizar tanto na horizontal quanto na vertical.
+            <code>place-items: center;</code> para centralizar no centro do grid.
+            Ela agrupa o: <code>align-items: center;</code>
+            <code>justify-items: center;</code>
+        </p>
+        <div class="grid-centralizado">
+            <!-- div.item*5 e aperto o tab -->
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+        </div>
+    </section>
+
+    <section id="texto-centralizado">
+        <h2>Texto Centralizado</h2>
+        <p>Vou usar a tag <code>text-align</code> para definir o alinhamento do meu texto.</p>
+        <div class="texto-centralizado">
+            <!-- div.item*5 e aperto o tab -->
+            Texto Centralizado
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+        </div>
+    </section>
+
+    <section id="nao-responsivo">
+        <h2>Não Responsivo</h2>
+        <p>Não se ajusta as tamanho da tela mantendo a largura e altura fixada.</p>
+        <div class="nao-responsivo" style="width: 500px;">
+            <!-- div.item*5 e aperto o tab -->
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+        </div>
+    </section>
+
+    <section id="responsivo">
+        <h2>Responsivo</h2>
+        <p>Ajusta o temanho com base no temanho da tela.</p>
+        <div class="responsivo">
+            <!-- div.item*5 e aperto o tab -->
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+        </div>
+    </section>
+
+
+
+
+
+
+</body>
+
+</html>

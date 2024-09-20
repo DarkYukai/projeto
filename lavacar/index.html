@@ -1,0 +1,118 @@
+<!-- como o navegador vai interpretar o arquivo -->
+<!DOCTYPE html>
+<!-- linguagem padrão da pagina -->
+<html lang="pt-BR">
+
+<head>
+    <!-- Tipo de caractere usados -->
+    <meta charset="UTF-8">
+    <!-- Compatibilidade com navegadores -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Responsividade: layout conforme o tamanho da pagina -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- titulo da pagina -->
+    <title>Lavacar e Pneus</title>
+    <!-- itens de SEO -->
+    <meta name="description" content="Serviço de lavagem e borracharia">
+    <meta name="keywords" content="lavagem automativa, limpeza automotiva, borracharia, pneu">
+    <meta name="author" content="yukai tech">
+    <!-- favicon: logo do sistema ou logo da empresa -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- folha de estilo css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- css pronto: twitter bootstrap/ tailwind css/ materialize css/ foundation css -->
+    <!-- Fontes Externas: Google Roboto -->
+</head>
+<!-- corpo da minha pagina -->
+
+<body>
+    <!-- Header: Imagens importantes e a navegação da minha pagina -->
+    <header class="cabecalho-section">
+        <!-- Div: Container serve pra organizar a informaçao -->
+        <div class="cabecalho-conteudo">
+            <!-- h1 a h6 servem como titulos e subtitulos -->
+            <h1>Lavacar e Pneus Senges</h1>
+            <!-- p: paragrafo -->
+            <p>Seu carro em boas mãos, atendimento de exelencia para Sengés e região.
+            </p>
+            <!-- usar <br> para plar linha -->
+            <!-- href: "https://www.googloe.com.br" -->
+            <a href="#servicos" class="btn-primary"> Nossos Serviços</a>
+        </div>
+    </header>
+    <!-- seções ou segmentos- conteudo principal -->
+    <!-- seviço -->
+    <section id="servicos" class="secao-servicos">
+        <h2>Nossos Serviços</h2>
+        <!-- div serve para organizar nossos itens na tela -->
+        <div class="lista-servicos">
+            <!-- eu vou listar meus servicos -->
+            <div class="item-servico">
+                <h3>Lavagem Completa</h3>
+                <p>Deixe o seu carro impecavel e brinhando!</p>
+
+            </div>
+            <div class="item-servico">
+                <h3>Polimento e Enceramento</h3>
+                <p>Proteja e realce a pintura!</p>
+
+            </div>
+            <div class="item-servico">
+                <h3>Limpeza Interna</h3>
+                <p>Seu carro com cheirinho de novo!</p>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- sobre -->
+    <section id="sobre" class="secao-sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos especialistas em lavagem de carros!</p>
+    </section>
+    <!-- testemunhos -->
+    <section id="testemunhos" class="secao-testemunhos">
+        <h2>O que dizem nossos clientes! </h2>
+        <div class="lista-testemunhos">
+            <div class="item-testemunho">
+                <!-- p para paragrafo, span para partes -->
+                <p>Meu carro nunca foi tão bem cuidado!</p>
+                <span>João da Silva</span>
+            </div>
+            <div class="item-testemunho">
+                <!-- p para paragrafo, span para partes -->
+                <p>Meu carro com cheiro de novo!</p>
+                <span>Maria da Silva</span>
+            </div>
+        </div>
+    </section>
+    <!-- contato -->
+    <section id="contato" class="secao-contato">
+        <!-- Verbos HTTP: GET - solicitar consutas via url -->
+        <!-- Verbos HTTP: GET - nao usar pra usuario e senha-->
+        <!-- Verbos HTTP: POST - usado e formularios-->
+        <!-- Verbos HTTP: UPDATE ou PUT - utilizado para atualização-->
+        <!-- Verbos HTTP: DELETE - quando quiser remover-->
+        <!-- Verbos HTTP: OPTION - verificar disponibilidade-->
+        <h2>Entre em contado conosco</h2>
+        <!-- Form: tag utilizada para envio do formulario -->
+        <!-- action: rota para qual vai ser enviado o formulario -->
+        <!-- action: {{rout("site. contato")}} -->
+        <!-- method= POST, PUT -->
+        <!-- enctype="multipart/form-data" -->
+        <form class="form-contato">
+            <input type="text" placeholder="Digite seu nome" required>
+            <input type="email" placeholder="Digite seu e-mail" required>
+            <textarea placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="btn-primary">Enviar</button>
+            <!-- <button type="reset"> Limpar</button> -->
+        </form>
+
+    </section>
+    <!-- Rodape ou Footer: links ou mapa do site -->
+    <footer id="rodape" class="rodape">
+        <p>&copy; 2024 Lavacar e Pneus</p>
+    </footer>
+</body>
+
+</html>
